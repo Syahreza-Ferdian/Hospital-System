@@ -6,25 +6,21 @@ public class SK01_13_225150707111001_GhatfanEmeryRazan implements List{
 
     @Override
     public void hapusPasien(Pasien p) {
-        // TODO Auto-generated method stub
         
     }
 
     @Override
     public void hapusPasienAsuransi(JenisLayanan asuransi) {
-        // TODO Auto-generated method stub
         
     }
 
     @Override
     public void sisipPasienPadaUrutanKe(Pasien p, int urutan) {
-        // TODO Auto-generated method stub
         listPasien.add(urutan, p);
     }
 
     @Override
     public void tambahPasien(Pasien p) {
-        // TODO Auto-generated method stub
         if(p.getJenisLayanan() == JenisLayanan.BIASA) {
             listPasien.addLast(p);
             return;
