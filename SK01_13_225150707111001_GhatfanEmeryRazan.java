@@ -25,26 +25,30 @@ public class SK01_13_225150707111001_GhatfanEmeryRazan implements List{
     @Override
     public void tambahPasien(Pasien p) {
         // TODO Auto-generated method stub
-        if(p.getJenisLayanan() == JenisLayanan.BIASA) listPasien.addLast(p);
+        if(p.getJenisLayanan() == JenisLayanan.BIASA) {
+            listPasien.addLast(p);
+            return;
+        }
         else if(p.getJenisLayanan() == JenisLayanan.VIP) {
-            if(listPasien.lastIndexOf(new Pasien(JenisLayanan.VVIP)) != -1) {
-                if(listPasien.lastIndexOf(new Pasien(JenisLayanan.VIP)) != -1) {
-                    listPasien.add(listPasien.lastIndexOf(new Pasien(JenisLayanan.VIP)) + 1, p);
+            int lastIndexPasienVVIP = listPasien.lastIndexOf(new Pasien(JenisLayanan.VVIP));
+            int lastIndexPasienVIP = listPasien.lastIndexOf(new Pasien(JenisLayanan.VIP));
+
+            if(lastIndexPasienVVIP != -1) {
+                if(lastIndexPasienVIP != -1) {
+                    listPasien.add(lastIndexPasienVIP + 1, p);
                 }
-                else listPasien.add(listPasien.lastIndexOf(new Pasien(JenisLayanan.VVIP)) + 1, p);
+                else listPasien.add(lastIndexPasienVVIP + 1, p);
             }
             else listPasien.addFirst(p);
         }
         else if(p.getJenisLayanan() == JenisLayanan.VVIP) {
-            if(listPasien.lastIndexOf(new Pasien(JenisLayanan.VVIP)) != -1) {
-                listPasien.add(listPasien.lastIndexOf(new Pasien(JenisLayanan.VVIP)) + 1, p);
+            int lastIndexPasienVVIP = listPasien.lastIndexOf(new Pasien(JenisLayanan.VVIP));
+
+            if(lastIndexPasienVVIP != -1) {
+                listPasien.add(lastIndexPasienVVIP + 1, p);
             }
             else listPasien.addFirst(p);
         }
-    }
-
-    public static void main(String[] args) {
-        
     }
 
 }
