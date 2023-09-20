@@ -14,6 +14,7 @@ public class SK01_13_225150707111001_GhatfanEmeryRazan {
             int input;
             try {
                 input = in.nextInt();
+                if(input <1 || input > 5) System.out.printf("\n%s%sPilih angka 1-5!%s\n\n", Color.RED_BG, Color.WHITE_BOLD, Color.RESET);
                 in.nextLine();
             } catch (Exception e) {
                 in.nextLine();
