@@ -2,6 +2,13 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class SK01_13_225150707111001_GhatfanEmeryRazan {
+    //Anggota 1:
+    //Mirza Hilmi Shodiq
+    //NIM : 225150707111067
+
+    //Anggota 2:
+    //Syahreza Fisti Ferdian
+    //NIM : 225150701111036
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         ListPasien queue = new ListPasien();
